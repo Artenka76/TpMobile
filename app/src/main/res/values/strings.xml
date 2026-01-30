@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="continuer_avec_facebook">Continuer avec facebook</string>
+    <string name="app_name">PowerHome</string>
+    <string name="back_arrow">back_arrow</string>
+    <string name="email">E-mail</string>
+    <string name="mot_de_passe">mot de passe</string>
+    <string name="ou">OU</string>
+    <string name="login_string_title">Connectez-vous</string>
+    <string name="login_string_instruction">Identifiez-vous</string>
+    <string name="creez_un_compte">Créez un compte</string>
+    <string name="mot_de_passe_oublie">mot de passe oublié ?</string>
+    <string name="nouveau_sur_powerhome">Nouveau sur PowerHome ?</string>
+</resources>
