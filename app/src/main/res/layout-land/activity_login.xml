@@ -128,7 +128,7 @@
                 android:textSize="15sp"
                 android:textStyle="bold"
                 android:layout_gravity="end"
-                android:layout_marginEnd="20dp"
+                android:layout_marginEnd="17dp"
                 android:layout_marginBottom="15dp"/>
 
             <Button
