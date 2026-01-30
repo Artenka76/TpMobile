@@ -5,36 +5,37 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/windowBackground">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@color/colorPrimary"
-        android:paddingHorizontal="5dp"
-        android:paddingVertical="5dp"
-        android:layout_marginBottom="15dp"
-        android:id="@+id/tvTitle">
 
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center_horizontal"
-            android:contentDescription="@string/back_arrow"
-            android:src="@drawable/img_back_arrow"
-            app:iconTint="@color/textColorPrimary"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:layout_marginEnd="15dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="@string/login_string_title"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="@color/textColorPrimary"/>
+            android:orientation="horizontal"
+            android:background="@color/colorPrimary"
+            android:paddingHorizontal="5dp"
+            android:paddingVertical="5dp"
+            android:layout_marginBottom="30dp"
+            android:id="@+id/tvTitle">
 
-    </LinearLayout>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@string/back_arrow"
+                android:src="@drawable/img_back_arrow"
+                app:tint="@color/textColorPrimary"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_marginEnd="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/login_string_title"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/textColorPrimary"/>
+
+        </LinearLayout>
 
     <!-- Conteneur principal -->
     <LinearLayout
@@ -60,7 +61,8 @@
                 android:text="@string/login_string_instruction"
                 android:textStyle="bold"
                 android:textColor="@color/colorPrimaryDark"
-                android:layout_marginBottom="12dp"/>
+                android:layout_marginBottom="12dp"
+                android:layout_marginStart="15dp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -100,7 +102,7 @@
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_gravity="center_horizontal"
-                    android:contentDescription="@string/mot_de_passe"
+                    android:contentDescription="@string/password"
                     android:src="@drawable/img_logo_mdp"
                     app:tint="@color/colorPrimaryLight"
                     android:layout_marginEnd="10dp"/>
@@ -111,19 +113,23 @@
                     android:layout_gravity="center_vertical"
                     android:autofillHints="password"
                     android:inputType="textPassword"
-                    android:hint="@string/mot_de_passe"
+                    android:hint="@string/password"
                     android:textSize="15sp"
                     android:textColor="@color/colorPrimaryLight"/>
 
             </LinearLayout>
 
-            <TextView
+            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/mot_de_passe_oublie"
-                android:textColor="#1A73E8"
+                android:backgroundTint="@color/windowBackground"
+                android:text="@string/forgotten_password"
+                android:textColor="@color/blue"
                 android:textSize="15sp"
-                android:layout_marginBottom="12dp"/>
+                android:textStyle="bold"
+                android:layout_gravity="end"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="15dp"/>
 
             <Button
                 android:layout_width="match_parent"
@@ -151,7 +157,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="8dp"
-                android:text="@string/ou"
+                android:text="@string/or"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
 
@@ -175,24 +181,41 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/nouveau_sur_powerhome"
-                android:textColor="#000000"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="CRÉE UN COMPTE"
-                android:textColor="#1A73E8"
-                android:textStyle="bold"
-                android:layout_marginTop="4dp"/>
+                android:text="@string/new_on_the_app"
+                android:textSize="17sp"/>
 
             <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/create_acount"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/windowBackground"
+                android:textColor="@color/blue"
+                android:layout_marginBottom="40dp"/>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Continuer avec Facebook"
-                android:layout_marginTop="16dp"
-                android:textColor="#FFFFFF"
-                android:backgroundTint="#1877F2"/>
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:contentDescription="@string/password"
+                    android:src="@drawable/img_facebook_logo"
+                    app:tint="@color/blueFacebook"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/facebook"
+                    android:textSize="15sp"
+                    android:backgroundTint="@color/windowBackground"
+                    android:textColor="@color/blueFacebook"/>
+
+            </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>

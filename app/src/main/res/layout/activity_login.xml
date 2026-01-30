@@ -23,7 +23,7 @@
             android:layout_gravity="center_horizontal"
             android:contentDescription="@string/back_arrow"
             android:src="@drawable/img_back_arrow"
-            app:iconTint="@color/textColorPrimary"
+            app:tint="@color/textColorPrimary"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:layout_marginEnd="15dp"/>
 
@@ -88,7 +88,7 @@
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_gravity="center_horizontal"
-            android:contentDescription="@string/mot_de_passe"
+            android:contentDescription="@string/password"
             android:src="@drawable/img_logo_mdp"
             app:tint="@color/colorPrimaryLight"
             android:layout_marginEnd="10dp"/>
@@ -99,7 +99,7 @@
             android:layout_gravity="center_vertical"
             android:autofillHints="password"
             android:inputType="textPassword"
-            android:hint="@string/mot_de_passe"
+            android:hint="@string/password"
             android:textSize="15sp"
             android:textColor="@color/colorPrimaryLight"
             tools:ignore="LabelFor" />
@@ -110,12 +110,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/windowBackground"
-        android:text="@string/mot_de_passe_oublie"
+        android:text="@string/forgotten_password"
         android:textColor="@color/blue"
-        android:textSize="20sp"
         android:textStyle="bold"
+        android:textSize="17sp"
         android:layout_gravity="end"
-        android:layout_marginEnd="20dp"
         android:layout_marginBottom="15dp"/>
 
     <Button
@@ -129,44 +128,38 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingHorizontal="5dp"
+        android:layout_marginBottom="25dp">
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/nouveau_sur_powerhome"
+            android:text="@string/new_on_the_app"
+            android:textSize="17sp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/create_acount"
             android:textSize="17sp"
-            android:gravity="center"/>
+            android:textStyle="bold"
+            android:backgroundTint="@color/windowBackground"
+            android:textColor="@color/blue"/>
 
     </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="@string/nouveau_sur_powerhome"
-        android:textSize="17sp"/>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="@string/creez_un_compte"
-        android:textSize="17sp"
-        android:backgroundTint="@color/windowBackground"
-        android:textColor="@color/blue"
-        android:layout_marginBottom="15dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:layout_marginBottom="15dp">
+        android:layout_marginBottom="25dp">
 
         <View
             android:layout_width="0dp"
-            android:layout_height="1dp"
+            android:layout_height="2dp"
             android:layout_weight="1"
             android:background="@color/black"
             android:layout_marginStart="10dp"/>
@@ -175,13 +168,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="8dp"
-            android:text="@string/ou"
+            android:text="@string/or"
             android:textColor="@color/black"
             android:textStyle="bold" />
 
         <View
             android:layout_width="0dp"
-            android:layout_height="1dp"
+            android:layout_height="2dp"
             android:layout_weight="1"
             android:background="@color/black"
             android:layout_marginEnd="10dp"/>
@@ -197,7 +190,7 @@
         <ImageView
             android:layout_width="35dp"
             android:layout_height="35dp"
-            android:contentDescription="@string/mot_de_passe"
+            android:contentDescription="@string/password"
             android:src="@drawable/img_facebook_logo"
             app:tint="@color/blueFacebook"
             android:layout_marginEnd="10dp"/>
@@ -205,7 +198,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/continuer_avec_facebook"
+            android:text="@string/facebook"
             android:textSize="17sp"
             android:backgroundTint="@color/windowBackground"
             android:textColor="@color/blueFacebook"/>

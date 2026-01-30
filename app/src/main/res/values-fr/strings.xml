@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="facebook">Continuer avec Facebook</string>
+    <string name="back_arrow">Flèche de retour arrière</string>
+    <string name="email">E-mail</string>
+    <string name="password">Mot de passe</string>
+    <string name="or">OU</string>
+    <string name="login_string_title">Connectez-vous</string>
+    <string name="login_string_instruction">Identifiez-vous</string>
+    <string name="create_acount">CRÉÉ UN COMPTE</string>
+    <string name="forgotten_password">MOT DE PASSE OUBLIÉ ?</string>
+    <string name="new_on_the_app">Nouveau sur PowerHome ?</string>
+</resources>

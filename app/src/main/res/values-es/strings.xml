@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="back_arrow">Flecha de retroceso</string>
+    <string name="email">Correo electrónico</string>
+    <string name="password">Contraseña</string>
+    <string name="or">O</string>
+    <string name="login_string_title">Iniciar sesión</string>
+    <string name="login_string_instruction">Identifíquese</string>
+    <string name="create_acount">CREAR UNA CUENTA</string>
+    <string name="forgotten_password">¿OLVIDASTE TU CONTRASEÑA?</string>
+    <string name="new_on_the_app">¿Nuevo en PowerHome?</string>
+    <string name="facebook">Continuar con Facebook</string>
+</resources>
