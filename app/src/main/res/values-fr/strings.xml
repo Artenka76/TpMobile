@@ -7,7 +7,12 @@
     <string name="or">OU</string>
     <string name="login_string_title">Connectez-vous</string>
     <string name="login_string_instruction">Identifiez-vous</string>
-    <string name="create_acount">CRÉÉ UN COMPTE</string>
+    <string name="create_account">CRÉÉ UN COMPTE</string>
     <string name="forgotten_password">MOT DE PASSE OUBLIÉ ?</string>
     <string name="new_on_the_app">Nouveau sur PowerHome ?</string>
+    <string name="create_a_new_account">Créer un nouveau compte</string>
+    <string name="first_name">Prénom</string>
+    <string name="last_name">Nom</string>
+    <string name="mobile">Mobile</string>
+    <string name="phone">Téléphone</string>
 </resources>

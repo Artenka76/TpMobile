@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Réfrigérateur",
+    "reference": "RF-3000",
+    "wattage": 150
+  },
+  {
+    "id": 2,
+    "name": "Télévision",
+    "reference": "TV-42X",
+    "wattage": 100
+  },
+  {
+    "id": 3,
+    "name": "Lave-linge",
+    "reference": "WM-500",
+    "wattage": 500
+  },
+  {
+    "id": 4,
+    "name": "Ordinateur portable",
+    "reference": "LP-15A",
+    "wattage": 65
+  },
+  {
+    "id": 5,
+    "name": "Climatiseur",
+    "reference": "AC-1000",
+    "wattage": 1200
+  }
+]

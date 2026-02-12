@@ -8,7 +8,14 @@
     <string name="or">OR</string>
     <string name="login_string_title">Log in</string>
     <string name="login_string_instruction">Sign in</string>
-    <string name="create_acount">CREATE AN ACCOUNT</string>
+    <string name="create_account">CREATE AN ACCOUNT</string>
     <string name="forgotten_password">FORGOT PASSWORD?</string>
     <string name="new_on_the_app">New to PowerHome?</string>
+    <string name="create_a_new_account">Créer un nouveau compte</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="mobile">Mobile</string>
+    <string name="phone">Phone</string>
+    <string name="floor">FLOOR</string>
+    <string name="appliance">appliance</string>
 </resources>

@@ -1,0 +1,61 @@
+[
+  {
+    "id": 1,
+    "userName": "Johann Tixier",
+    "floor": 2,
+    "area": 45.5,
+    "appliances": [
+      {
+        "id": 1,
+        "name": "Climatiseur",
+        "reference": "AC-3000",
+        "wattage": 150,
+        "drawable": "ic_climatiseur"
+      },
+      {
+        "id": 2,
+        "name": "Aspirateur",
+        "reference": "VC-42X",
+        "wattage": 100,
+        "drawable": "ic_aspirateur"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "userName": "Sam Asty",
+    "floor": 1,
+    "area": 60.0,
+    "appliances": [
+      {
+        "id": 3,
+        "name": "Machine à laver",
+        "reference": "WM-500",
+        "wattage": 500,
+        "drawable": "ic_machine_a_laver"
+      },
+      {
+        "id": 4,
+        "name": "Fer à repasser",
+        "reference": "IR-15A",
+        "wattage": 65,
+        "drawable": "ic_iron"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "userName": "Alice Dupont",
+    "floor": 3,
+    "area": 55.0,
+    "appliances": [
+      {
+        "id": 5,
+        "name": "Climatiseur",
+        "reference": "AC-1000",
+        "wattage": 1200,
+        "drawable": "ic_climatiseur"
+      }
+    ]
+  }
+]
