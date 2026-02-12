@@ -1,13 +1,8 @@
 package iut.dam.maximumpawaaaaaa;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -36,26 +31,23 @@ public class HabitatActivity extends AppCompatActivity {
 
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject item = jsonArray.getJSONObject(i);
-                User user = item;
-                userList.add(userName);
+                User user = User.JsonToUser(item);
+                userList.add(user);
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
 
         ListView listView = findViewById(R.id.list_users);
-        ArrayAdapter<String> adapter =
-                new ArrayAdapter<>(this,
+        UserAdapter adapter =
+                new UserAdapter(this,
                         R.layout.item_user,
-                        userNamesList);
+                        userList);
         listView.setAdapter(adapter);
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String selectedItem = (String) parent.getItemAtPosition(position);
-                Toast.makeText(getApplicationContext(), selectedItem, Toast.LENGTH_SHORT).show();
-            }
+        listView.setOnItemClickListener((parent, view, position, id) -> {
+            User selectedItem = (User) parent.getItemAtPosition(position);
+            Toast.makeText(getApplicationContext(), selectedItem.userName, Toast.LENGTH_SHORT).show();
         });
     }
 }

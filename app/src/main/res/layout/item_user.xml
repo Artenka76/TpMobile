@@ -52,6 +52,7 @@
                     android:layout_marginEnd="2dp"/>
 
                 <TextView
+                    android:id="@+id/tvAppliance"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/appliance"
@@ -64,27 +65,31 @@
                     android:layout_width="18dp"
                     android:layout_height="18dp"
                     android:src="@drawable/ic_machine_a_laver"
-                    android:layout_marginEnd="4dp"/>
+                    android:layout_marginEnd="4dp"
+                    android:visibility="gone"/>
 
                 <ImageView
                     android:id="@+id/ivAppliance2"
                     android:layout_width="18dp"
                     android:layout_height="18dp"
                     android:src="@drawable/ic_aspirateur"
-                    android:layout_marginEnd="4dp"/>
+                    android:layout_marginEnd="4dp"
+                    android:visibility="gone"/>
 
                 <ImageView
                     android:id="@+id/ivAppliance3"
                     android:layout_width="18dp"
                     android:layout_height="18dp"
                     android:src="@drawable/ic_climatiseur"
-                    android:layout_marginEnd="4dp"/>
+                    android:layout_marginEnd="4dp"
+                    android:visibility="gone"/>
 
                 <ImageView
                     android:id="@+id/ivAppliance4"
                     android:layout_width="18dp"
                     android:layout_height="18dp"
-                    android:src="@drawable/ic_fer_a_repasser"/>
+                    android:src="@drawable/ic_fer_a_repasser"
+                    android:visibility="gone"/>
             </LinearLayout>
 
         </LinearLayout>

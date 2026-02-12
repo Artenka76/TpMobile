@@ -8,6 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+
 import java.util.List;
 
 import iut.dam.maximumpawaaaaaa.classe.User;
@@ -25,7 +27,8 @@ public class UserAdapter extends ArrayAdapter<User> {
         this.items = items;
     }
 
-    public View getView(int position, View convertView, ViewGroup parent) {
+    @NonNull
+    public View getView(int position, View convertView, @NonNull ViewGroup parent) {
         View layout = convertView;
         if (convertView == null) {
             LayoutInflater inflater = activity.getLayoutInflater();
@@ -33,17 +36,38 @@ public class UserAdapter extends ArrayAdapter<User> {
         }
         TextView nameTV = layout.findViewById(R.id.tvName);
         TextView applianceCountTV = layout.findViewById(R.id.tvApplianceCount);
+        TextView applianceTV = layout.findViewById(R.id.tvAppliance);
         ImageView appliance1IV = layout.findViewById(R.id.ivAppliance1);
         ImageView appliance2IV = layout.findViewById(R.id.ivAppliance2);
         ImageView appliance3IV = layout.findViewById(R.id.ivAppliance3);
         ImageView appliance4IV = layout.findViewById(R.id.ivAppliance4);
+        TextView floorTV = layout.findViewById(R.id.tvFloor);
 
-        nameTV.setText(items.get(position).userName);
-        applianceCountTV.setText(items.size());
-        appliance1IV.setImageResource(getImageForType(items.get(position).appliances.get(0).name));
-        appliance2IV.setImageResource(getImageForType(items.get(position).appliances.get(1).name));
-        appliance3IV.setImageResource(getImageForType(items.get(position).appliances.get(2).name));
-        appliance4IV.setImageResource(getImageForType(items.get(position).appliances.get(3).name));
+        User user = items.get(position);
+
+        nameTV.setText(user.userName);
+        applianceCountTV.setText(String.valueOf(user.appliances.size()));
+        int applianceCount = user.appliances.size();
+
+        if (applianceCount >= 1) {
+            appliance1IV.setVisibility(View.VISIBLE);
+            appliance1IV.setImageResource(getImageForType(user.appliances.get(0).name));
+        }
+        if (applianceCount >= 2) {
+            appliance2IV.setVisibility(View.VISIBLE);
+            appliance2IV.setImageResource(getImageForType(user.appliances.get(1).name));
+            applianceTV.setText(R.string.appliances);
+        }
+        if (applianceCount >= 3) {
+            appliance3IV.setVisibility(View.VISIBLE);
+            appliance3IV.setImageResource(getImageForType(user.appliances.get(2).name));
+        }
+        if (applianceCount >= 4) {
+            appliance4IV.setVisibility(View.VISIBLE);
+            appliance4IV.setImageResource(getImageForType(user.appliances.get(3).name));
+        }
+
+        floorTV.setText(String.valueOf(user.floor));
         return layout;
     }
 

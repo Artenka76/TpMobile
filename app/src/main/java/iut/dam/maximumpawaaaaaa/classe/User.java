@@ -1,5 +1,10 @@
 package iut.dam.maximumpawaaaaaa.classe;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class User {
@@ -14,5 +19,14 @@ public class User {
         this.floor = floor;
         this.area = area;
         this.appliances = appliances;
+    }
+
+    public static User JsonToUser(JSONObject json) throws JSONException {
+        JSONArray applianceJSON = json.getJSONArray("appliances");
+        List<Appliance> applianceList = new ArrayList<>();
+        for(int i = 0; i < applianceJSON.length(); i++){
+            applianceList.add(Appliance.JsonToAppliance(applianceJSON.getJSONObject(i)));
+        }
+        return new User(json.getInt("id"), json.getString("userName"), json.getInt("floor"), json.getDouble("area"), applianceList);
     }
 }
