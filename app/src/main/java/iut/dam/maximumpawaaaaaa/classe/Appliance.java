@@ -6,9 +6,10 @@ import org.json.JSONObject;
 public class Appliance {
     public int id;
     public String name;
-    public String reference;
+    public String reference; // format CL-xxx
     public int wattage;
-    public Appliance(int id, String name, String reference, int wattage){
+
+    public Appliance(int id, String name, String reference, int wattage) {
         this.id = id;
         this.name = name;
         this.reference = reference;

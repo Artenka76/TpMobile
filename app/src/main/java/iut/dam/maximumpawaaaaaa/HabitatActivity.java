@@ -1,8 +1,13 @@
 package iut.dam.maximumpawaaaaaa;
 
+import android.app.AlertDialog;
+import android.content.Context;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -44,10 +49,5 @@ public class HabitatActivity extends AppCompatActivity {
                         R.layout.item_user,
                         userList);
         listView.setAdapter(adapter);
-
-        listView.setOnItemClickListener((parent, view, position, id) -> {
-            User selectedItem = (User) parent.getItemAtPosition(position);
-            Toast.makeText(getApplicationContext(), selectedItem.userName, Toast.LENGTH_SHORT).show();
-        });
     }
 }

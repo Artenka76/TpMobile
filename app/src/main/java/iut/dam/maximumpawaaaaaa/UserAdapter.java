@@ -1,11 +1,15 @@
 package iut.dam.maximumpawaaaaaa;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -13,6 +17,7 @@ import androidx.annotation.NonNull;
 import java.util.List;
 
 import iut.dam.maximumpawaaaaaa.classe.User;
+import iut.dam.maximumpawaaaaaa.classe.Appliance;
 
 public class UserAdapter extends ArrayAdapter<User> {
 
@@ -46,28 +51,72 @@ public class UserAdapter extends ArrayAdapter<User> {
         User user = items.get(position);
 
         nameTV.setText(user.userName);
-        applianceCountTV.setText(String.valueOf(user.appliances.size()));
         int applianceCount = user.appliances.size();
+        applianceCountTV.setText(String.valueOf(applianceCount));
 
         if (applianceCount >= 1) {
             appliance1IV.setVisibility(View.VISIBLE);
             appliance1IV.setImageResource(getImageForType(user.appliances.get(0).name));
         }
+        else
+            appliance1IV.setVisibility(View.GONE);
         if (applianceCount >= 2) {
             appliance2IV.setVisibility(View.VISIBLE);
             appliance2IV.setImageResource(getImageForType(user.appliances.get(1).name));
             applianceTV.setText(R.string.appliances);
         }
+        else
+            appliance2IV.setVisibility(View.GONE);
         if (applianceCount >= 3) {
             appliance3IV.setVisibility(View.VISIBLE);
             appliance3IV.setImageResource(getImageForType(user.appliances.get(2).name));
         }
+        else
+            appliance3IV.setVisibility(View.GONE);
         if (applianceCount >= 4) {
             appliance4IV.setVisibility(View.VISIBLE);
             appliance4IV.setImageResource(getImageForType(user.appliances.get(3).name));
         }
+        else
+            appliance4IV.setVisibility(View.GONE);
+
+        int totalConsumptionCount = 0;
+        for (Appliance appliance : user.appliances) {
+            totalConsumptionCount += appliance.wattage;
+        }
+
+        final int totalConsumption = totalConsumptionCount;
 
         floorTV.setText(String.valueOf(user.floor));
+
+        layout.setOnClickListener(v -> {
+            AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+
+            LayoutInflater inflater = LayoutInflater.from(getContext());
+            View dialogView = inflater.inflate(R.layout.dialog_user_layout, null);
+
+            TextView dialogName = dialogView.findViewById(R.id.tvUserName);
+            TextView dialogFloor = dialogView.findViewById(R.id.tvUserFloor);
+            ListView dialogAppliances = dialogView.findViewById(R.id.lvEquipments);
+            TextView dialogConsumption = dialogView.findViewById(R.id.tvTotalConsumption);
+            Button okButton = dialogView.findViewById(R.id.btnOk);
+            ApplianceAdapter adapter =
+                    new ApplianceAdapter((Activity) getContext(),
+                            R.layout.item_equipment,
+                            user.appliances);
+            
+            dialogName.setText(user.userName);
+            dialogFloor.setText(getContext().getString(R.string.floor).concat(" ").concat(String.valueOf(user.floor)));
+            dialogAppliances.setAdapter(adapter);
+            dialogConsumption.setText(String.valueOf(totalConsumption).concat(" W"));
+
+            AlertDialog dialog = builder.setView(dialogView).create();
+
+            okButton.setOnClickListener(buttonView -> dialog.dismiss());
+
+            dialog.show();
+        });
+
         return layout;
     }
 
