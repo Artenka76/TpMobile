@@ -1,8 +1,8 @@
-package iut.dam.maximumpawaaaaaa;
+package iut.dam.powerhome;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,18 +16,18 @@ import androidx.annotation.NonNull;
 
 import java.util.List;
 
-import iut.dam.maximumpawaaaaaa.classe.User;
-import iut.dam.maximumpawaaaaaa.classe.Appliance;
+import iut.dam.powerhome.classe.User;
+import iut.dam.powerhome.classe.Appliance;
 
 public class UserAdapter extends ArrayAdapter<User> {
 
-    Activity activity;
+    Context context;
     int itemResId;
     List<User> items;
-    public UserAdapter(Activity activity, int itemResId, List<User> items) {
-        super(activity, itemResId, items);
+    public UserAdapter(Context context, int itemResId, List<User> items) {
+        super(context, itemResId, items);
 
-        this.activity = activity;
+        this.context = context;
         this.itemResId = itemResId;
         this.items = items;
     }
@@ -36,8 +36,7 @@ public class UserAdapter extends ArrayAdapter<User> {
     public View getView(int position, View convertView, @NonNull ViewGroup parent) {
         View layout = convertView;
         if (convertView == null) {
-            LayoutInflater inflater = activity.getLayoutInflater();
-            layout = inflater.inflate(itemResId, parent, false);
+            layout = LayoutInflater.from(getContext()).inflate(R.layout.item_user, parent, false);
         }
         TextView nameTV = layout.findViewById(R.id.tvName);
         TextView applianceCountTV = layout.findViewById(R.id.tvApplianceCount);

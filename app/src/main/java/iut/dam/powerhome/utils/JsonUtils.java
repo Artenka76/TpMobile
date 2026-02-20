@@ -1,4 +1,4 @@
-package iut.dam.maximumpawaaaaaa.utils;
+package iut.dam.powerhome.utils;
 
 import android.content.Context;
 import java.io.InputStream;

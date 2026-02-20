@@ -1,4 +1,4 @@
-package iut.dam.maximumpawaaaaaa;
+package iut.dam.powerhome;
 
 import org.junit.Test;
 

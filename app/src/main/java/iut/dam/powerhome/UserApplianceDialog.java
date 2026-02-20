@@ -1,10 +1,10 @@
-package iut.dam.maximumpawaaaaaa;
+package iut.dam.powerhome;
 
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
 
-import iut.dam.maximumpawaaaaaa.classe.User;
+import iut.dam.powerhome.classe.User;
 
 public class UserApplianceDialog extends Dialog {
     public UserApplianceDialog(Context context, User user){

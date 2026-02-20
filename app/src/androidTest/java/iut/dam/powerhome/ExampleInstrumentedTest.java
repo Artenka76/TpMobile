@@ -1,4 +1,4 @@
-package iut.dam.maximumpawaaaaaa;
+package iut.dam.powerhome;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("iut.dam.maximumpawaaaaaa", appContext.getPackageName());
+        assertEquals("iut.dam.powerhome", appContext.getPackageName());
     }
 }

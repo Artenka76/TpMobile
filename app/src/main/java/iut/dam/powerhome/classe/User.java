@@ -1,4 +1,4 @@
-package iut.dam.maximumpawaaaaaa.classe;
+package iut.dam.powerhome.classe;
 
 import org.json.JSONArray;
 import org.json.JSONException;

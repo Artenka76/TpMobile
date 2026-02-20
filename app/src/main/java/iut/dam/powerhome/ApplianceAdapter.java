@@ -1,4 +1,4 @@
-package iut.dam.maximumpawaaaaaa;
+package iut.dam.powerhome;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
@@ -12,8 +12,7 @@ import androidx.annotation.NonNull;
 
 import java.util.List;
 
-import iut.dam.maximumpawaaaaaa.classe.Appliance;
-import iut.dam.maximumpawaaaaaa.classe.User;
+import iut.dam.powerhome.classe.Appliance;
 
 public class ApplianceAdapter extends ArrayAdapter<Appliance> {
     Activity activity;

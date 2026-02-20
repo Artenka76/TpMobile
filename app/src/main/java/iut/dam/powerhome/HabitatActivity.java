@@ -1,14 +1,7 @@
-package iut.dam.maximumpawaaaaaa;
+package iut.dam.powerhome;
 
-import android.app.AlertDialog;
-import android.content.Context;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,8 +11,8 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-import iut.dam.maximumpawaaaaaa.classe.User;
-import iut.dam.maximumpawaaaaaa.utils.JsonUtils;
+import iut.dam.powerhome.classe.User;
+import iut.dam.powerhome.utils.JsonUtils;
 
 public class HabitatActivity extends AppCompatActivity {
 

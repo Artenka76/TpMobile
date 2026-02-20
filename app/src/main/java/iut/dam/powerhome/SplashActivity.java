@@ -1,4 +1,4 @@
-package iut.dam.maximumpawaaaaaa;
+package iut.dam.powerhome;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
