@@ -6,6 +6,7 @@
     android:orientation="horizontal"
     tools:ignore="UseCompoundDrawables"
     android:background="@color/windowBackground"
+    android:paddingTop="10dp"
     android:weightSum="10">
 
         <!-- Espace gauche (10%) -->

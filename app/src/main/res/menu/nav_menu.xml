@@ -2,9 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/nav_habitat"
-        android:icon="@drawable/ic_aspirateur"
+        android:icon="@drawable/ic_home"
         android:title="@string/nav_feurst" />
 
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/ic_cog"
+        android:title="@string/nav_settings" />
+
+    <item
+        android:id="@+id/nav_account"
+        android:icon="@drawable/img_logo_user"
+        android:title="@string/nav_account" />
 
 </menu>
-

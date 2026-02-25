@@ -2,8 +2,14 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.MaximumPAWAAAAAA" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
     </style>
 
     <style name="Theme.powerhome" parent="Base.Theme.MaximumPAWAAAAAA" />
+
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <!-- This sets the color of the hamburger icon to white -->
+        <item name="colorControlNormal">@color/white</item>
+    </style>
 </resources>

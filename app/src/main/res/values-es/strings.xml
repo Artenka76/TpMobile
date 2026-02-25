@@ -15,4 +15,20 @@
     <string name="last_name">Apellido</string>
     <string name="mobile">Móvil</string>
     <string name="phone">Teléfono</string>
+    <string name="profile_name_placeholder">Juan Pérez</string>
+    <string name="profile_email_placeholder">juan.perez@email.com</string>
+    <string name="edit_profile_button">Editar perfil</string>
+    <string name="profile_image_description">Imagen de perfil de usuario</string>
+    <string name="floor">PISO</string>
+    <string name="appliance">electrodoméstico</string>
+    <string name="appliances">electrodomésticos</string>
+    <string name="ok">ok</string>
+    <string name="hello_blank_fragment">Hola fragmento en blanco</string>
+    <string name="nav_feurst">Inicio</string>
+    <string name="nav_sekont">No en casa</string>
+    <string name="open_menu">Abrir el menú</string>
+    <string name="close_menu">Cerrar el menú</string>
+    <string name="nav_settings">Ajustes</string>
+    <string name="nav_account">Cuenta</string>
+    <string name="log_out_button">Cerrar sesión</string>
 </resources>

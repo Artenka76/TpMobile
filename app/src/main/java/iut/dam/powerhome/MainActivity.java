@@ -6,6 +6,7 @@ import android.view.MenuItem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
@@ -13,9 +14,9 @@ import androidx.fragment.app.FragmentManager;
 
 import com.google.android.material.navigation.NavigationView;
 
-import java.util.Objects;
-
+import iut.dam.powerhome.fragments.AccountFragment;
 import iut.dam.powerhome.fragments.HabitatFragment;
+import iut.dam.powerhome.fragments.SettingsFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -29,6 +30,9 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
         // 1. Récupérer les vues
         drawerDL = findViewById(R.id.dl_drawer);
         NavigationView navNV = findViewById(R.id.nv_navigation);
@@ -36,21 +40,20 @@ public class MainActivity extends AppCompatActivity
 
         // 2. Créer le toggle (bouton hamburger ☰)
         toggle = new ActionBarDrawerToggle(
-                this, drawerDL,
+                this, drawerDL, toolbar,
                 R.string.open_menu,
                 R.string.close_menu
         );
         drawerDL.addDrawerListener(toggle);
         toggle.syncState(); // synchronise l'état de l'icône avec l'état du drawer
 
-        // 3. Activer le bouton home (←) dans l'ActionBar pour ouvrir le drawer
-        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
-
-        // 4. Écouter les clics dans le menu
+        // 3. Écouter les clics dans le menu
         navNV.setNavigationItemSelectedListener(this);
 
-        // 5. Afficher le premier fragment par défaut au démarrage
-        navNV.getMenu().performIdentifierAction(R.id.nav_habitat, 0);
+        // 4. Afficher le premier fragment par défaut au démarrage
+        if (savedInstanceState == null) {
+            navNV.getMenu().performIdentifierAction(R.id.nav_habitat, 0);
+        }
     }
 
     // Nécessaire pour que le toggle intercepte le clic sur le bouton ☰
@@ -69,6 +72,10 @@ public class MainActivity extends AppCompatActivity
 
         if (item.getItemId() == R.id.nav_habitat) {
             fragment = new HabitatFragment();
+        } else if (item.getItemId() == R.id.nav_settings) {
+            fragment = new SettingsFragment();
+        } else if (item.getItemId() == R.id.nav_account) {
+            fragment = new AccountFragment();
         }
 
         if (fragment != null) {

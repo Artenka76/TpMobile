@@ -15,4 +15,20 @@
     <string name="last_name">Nom</string>
     <string name="mobile">Mobile</string>
     <string name="phone">Téléphone</string>
+    <string name="profile_name_placeholder">Jean Dupont</string>
+    <string name="profile_email_placeholder">jean.dupont@email.com</string>
+    <string name="edit_profile_button">Modifier le profil</string>
+    <string name="profile_image_description">Image de profil de l\'utilisateur</string>
+    <string name="floor">ÉTAGE</string>
+    <string name="appliance">appareil</string>
+    <string name="appliances">appareils</string>
+    <string name="ok">ok</string>
+    <string name="hello_blank_fragment">Bonjour fragment vide</string>
+    <string name="nav_feurst">Accueil</string>
+    <string name="nav_sekont">Pas à la maison</string>
+    <string name="open_menu">Ouvrir le menu</string>
+    <string name="close_menu">Fermer le menu</string>
+    <string name="nav_settings">Paramètres</string>
+    <string name="nav_account">Compte</string>
+    <string name="log_out_button">Déconnexion</string>
 </resources>
